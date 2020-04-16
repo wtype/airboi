@@ -23,7 +23,7 @@ const V = new Vue({
         .catch(err => console.log(err));
     },
     getAverage() {
-      const sum = this.nums.reduce((previous, current) => previous + current);
+      const sum = this.nums.reduce((a, b) => a + b);
       const average = sum / this.nums.length;
       this.average = average;
       this.calcPM25();
@@ -66,5 +66,6 @@ const V = new Vue({
       }
       this.PM25 = aqipm25.toFixed(0);
     },
+    calcPM10() { },
   },
 });
